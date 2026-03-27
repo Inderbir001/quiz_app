@@ -1,40 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
+
+    <!-- ✅ Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="quiz-container">
       <div class="quiz-content">
-        <h1 class="title">Quiz App</h1>
+        <!-- Header Section -->
+        <header class="quiz-header">
+          <h1 class="title">Quiz App</h1>
+          <div class="progress">
+            <span id="progress-text">Question 1 / 10</span>
+          </div>
+        </header>
 
-        <div class="question-box">
-          <h2 id="question">Question goes here</h2>
-        </div>
+        <!-- Main Question Area -->
+        <main class="quiz-main">
+          <div class="question-box">
+            <h2 id="question">Question goes here</h2>
+          </div>
 
-        <div class="options">
-          <button class="option-btn">Option 1</button>
-          <button class="option-btn">Option 2</button>
-          <button class="option-btn">Option 3</button>
-          <button class="option-btn">Option 4</button>
-        </div>
+          <div class="options">
+            <button class="option-btn">Option 1</button>
+            <button class="option-btn">Option 2</button>
+            <button class="option-btn">Option 3</button>
+            <button class="option-btn">Option 4</button>
+          </div>
+        </main>
 
-        <div class="controls">
-          <button id="prev-btn">Previous</button>
-          <button id="next-btn">Next</button>
-        </div>
+        <!-- Footer/Controls Area -->
+        <footer class="quiz-footer">
+          <div class="progress">
+            <span id="info-text">Please choose an answer</span>
+          </div>
 
-        <div class="progress">
-          <span id="info-text">Please choose a answer</span>
-        </div>
-        <div class="progress">
-          <span id="progress-text">Question 1 / 10</span>
-        </div>
+          <div class="controls">
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+          </div>
+        </footer>
       </div>
     </div>
+
     <script type="module" src="script.js"></script>
   </body>
 </html>
