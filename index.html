@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,14 +21,33 @@
       <div class="quiz-content">
         <!-- Header Section -->
         <header class="quiz-header">
-          <h1 class="title">Quiz App</h1>
-          <div class="progress">
-            <span id="progress-text">Question 1 / 10</span>
+          <div class="header-left">
+            <h1 class="title">Quiz App</h1>
+          </div>
+          <div class="header-right">
+            <div class="scoreboard">Score: <span id="score">00</span></div>
+            <div class="progress">
+              <span id="progress-text">Question 1 / 10</span>
+            </div>
           </div>
         </header>
 
         <!-- Main Question Area -->
         <main class="quiz-main">
+          <!-- Question Navigation Palette -->
+          <div class="question-palette">
+            <button class="nav-item active">1</button>
+            <button class="nav-item">2</button>
+            <button class="nav-item">3</button>
+            <button class="nav-item">4</button>
+            <button class="nav-item">5</button>
+            <button class="nav-item">6</button>
+            <button class="nav-item">7</button>
+            <button class="nav-item">8</button>
+            <button class="nav-item">9</button>
+            <button class="nav-item">10</button>
+          </div>
+
           <div class="question-box">
             <h2 id="question">Question goes here</h2>
           </div>
@@ -39,19 +58,55 @@
             <button class="option-btn">Option 3</button>
             <button class="option-btn">Option 4</button>
           </div>
+
+          <!-- Secondary Actions -->
+          <div class="action-bar">
+            <button id="hint-btn" class="action-btn secondary">
+              <span>💡</span> Hint
+            </button>
+            <button id="skip-btn" class="action-btn secondary">
+              <span>⏭️</span> Skip
+            </button>
+          </div>
         </main>
 
         <!-- Footer/Controls Area -->
         <footer class="quiz-footer">
-          <div class="progress">
+          <div class="footer-status">
             <span id="info-text">Please choose an answer</span>
           </div>
 
           <div class="controls">
             <button id="prev-btn">Previous</button>
             <button id="next-btn">Next</button>
+            <button id="submit-btn" class="submit-highlight">
+              Submit Quiz
+            </button>
           </div>
         </footer>
+      </div>
+    </div>
+
+    <!-- Hint Modal Popup -->
+    <div id="hint-modal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>💡 Hint</h3>
+          <button id="close-hint" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id="hint-text">This is where your hint text will appear!</p>
+        </div>
+        <div class="modal-footer">
+          <button
+            class="modal-action-btn"
+            onclick="
+              document.getElementById('hint-modal').classList.remove('active')
+            "
+          >
+            Got it!
+          </button>
+        </div>
       </div>
     </div>
 

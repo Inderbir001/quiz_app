@@ -42,7 +42,7 @@ async function displayQuesAndCheckCorrectAnswer(index = 0) {
   const correctAnswer = questions[index].answer;
   console.log(correctAnswer);
   progressEl.textContent = `Question: ${index + 1} / ${questions.length}`;
-  infoEl.textContent = `Please Choose a Option`;
+  infoEl.textContent = `Please choose an answer`;
 
   const userAnswer = await userChoseOption();
   isAnswered = true;
