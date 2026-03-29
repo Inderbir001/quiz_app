@@ -1,0 +1,11 @@
+export const questionEl = document.getElementById('question');
+export const optionsEl = document.querySelectorAll('.option-btn');
+export const nxtbtn = document.getElementById('next-btn');
+export const prvbtn = document.getElementById('prev-btn');
+export const progressEl = document.getElementById('progress-text');
+export const infoEl = document.getElementById('info-text');
+export const scoreEl = document.getElementById('score');
+export const hintEl = document.getElementById('hint-btn');
+export const skipEl = document.getElementById('skip-btn');
+export const submitBtn = document.getElementById('submit-btn');
+export const navItems = document.querySelectorAll('.nav-item');
